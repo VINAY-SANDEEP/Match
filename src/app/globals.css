@@ -1,0 +1,160 @@
+.matched-pair {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.match-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+.student-card {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.student-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.student-card:hover img {
+  transform: scale(1.05);
+}
+
+.student-details h3 {
+  margin: 0.5rem 0;
+  color: #333;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.student-details p {
+  margin: 0.25rem 0;
+  color: #666;
+  animation: fadeIn 0.5s ease-in;
+  animation-fill-mode: both;
+}
+
+.student-details p:nth-child(2) { animation-delay: 0.1s; }
+.student-details p:nth-child(3) { animation-delay: 0.2s; }
+.student-details p:nth-child(4) { animation-delay: 0.3s; }
+.student-details p:nth-child(5) { animation-delay: 0.4s; }
+
+.heart {
+  font-size: 2rem;
+  animation: pulse 1.5s infinite, float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: #333;
+}
+
+button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+button:hover::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Add styles for the meme image */
+img[src*="makeameme.org"] {
+  display: block;
+  margin: 2rem auto;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+img[src*="makeameme.org"]:hover {
+  transform: scale(1.02);
+}
