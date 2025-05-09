@@ -7,9 +7,9 @@ const page = () => {
 
   const getImageUrl = (student) => {
     if (student.college === 'ACET') {
-      return `https://info.aec..in/ACET/StudentPhotos/${student.roll_number}.jpg`;
+      return `https://info.aec.edu.in/ACET/StudentPhotos/${student.roll_number}.jpg`;
     } else if (student.college === 'AEC') {
-      return `https://info.aec.in/AEC/StudentPhotos/${student.roll_number}.jpg`;
+      return `https://info.aec.edu.in/AEC/StudentPhotos/${student.roll_number}.jpg`;
     }
     return 'https://via.placeholder.com/60x60?text=No+Photo';
   };
