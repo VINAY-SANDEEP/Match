@@ -1,4 +1,4 @@
-export const studen= [
+export const students= [
     {
      "S. No": 1,
      "roll_number": "23P31A0562",
