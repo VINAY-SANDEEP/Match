@@ -7,9 +7,9 @@ const page = () => {
 
   const getImageUrl = (student) => {
     if (student.college === 'ACET') {
-      return `https://info.aec.edu.in/ACET/StudentPhotos/${student.roll_number}.jpg`;
+      return `https://info.aec..in/ACET/StudentPhotos/${student.roll_number}.jpg`;
     } else if (student.college === 'AEC') {
-      return `https://info.aec.edu.in/AEC/StudentPhotos/${student.roll_number}.jpg`;
+      return `https://info.aec.in/AEC/StudentPhotos/${student.roll_number}.jpg`;
     }
     return 'https://via.placeholder.com/60x60?text=No+Photo';
   };
@@ -31,8 +31,7 @@ const page = () => {
 
   return (
     <>
-      <h1>Naku ee alochina ala vachindhi anni adgadhu niku andhuku raledhu alochinchu</h1>
-      
+      <h1>Server mantaince lo petta sorry firends</h1>
       <button onClick={generateMatch}>Try Chey</button>
        <marquee style={{backgroundColor:'orange'}}>Sorry friends kavail anni cheyledhu naku pani pata ledhu</marquee>
       {matchedPair && ( 
